@@ -19,7 +19,7 @@ This repository includes a set of **batch scripts** for decoding EA Layer 3 audi
 ## 📚 Table of Contents
 
 * [✨ Features](#-features)
-* [🎵 How to Extract Music from The Sims 4, 3 & Medieval]([#-how-to-extract-music-from-the-sims-4-3-and-medieval-and-possible-the-sims--the-sims-2)
+* [🎵 How to Extract Music from The Sims 4, 3 & Medieval](#-how-to-extract-music-from-the-sims-4-3-and-medieval-and-possibly-the-sims--the-sims-2)
 
   * [Step 1: Install Tools](#step-1-install-tools)
   * [Step 2: Locate and Extract _AUD Files](#step-2-locate-and-extract-_aud-files)
