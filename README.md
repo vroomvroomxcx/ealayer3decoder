@@ -8,7 +8,7 @@ This repository includes a set of **batch scripts** for decoding EA Layer 3 audi
 
 ## ✨ Features
 
-* **Batch decoding** – Automatically processes all `.sns` compressed audio files in a folder.
+* **Batch decoding** – Automatically processes all `.sns`, `.snr`, and `.vid` compressed audio files in a folder.
 * **Audio conversion** – Converts decoded `.wav` files to FLAC or M4A formats.
 * **Skip existing files** – Prevents overwriting previously converted files.
 * **Automatic folder creation** – Organizes output into `FLAC` and `M4A` subfolders.
