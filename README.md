@@ -99,7 +99,7 @@ Follow the same extraction steps using **s3pe.exe**.
 3. You'll see different named `.package`, if you want to extract music from **Pop** station select `Pop.package`
 
 4. After opening `.package` you'll see one or more **.MP3** audio files, select desired one's → right-click and select **Extract**. Select folder to extract your music to
-   * All extracted audio is already in `.mp3` audio format, converting is optional. All you have to do now is follow **[Step 5](#step-5-identify-and-tag-your-audio)** of the tutorial to properly identify and tag audio. 
+   * All extracted audio is already in `.mp3` audio format, converting is optional. All you have to do now is follow **[Step 5](#step-5-identify-and-tag-your-audio)** of the guide to properly identify and tag audio. 
 
    
 ---
