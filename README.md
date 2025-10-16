@@ -156,8 +156,8 @@ After tagging, your audio files will be ready for playback with most media playe
 ## 🧩 Requirements
 
 * **Windows OS**
-* **FFmpeg** executable (included or bring your own)
-* No installation required – simply download and run the `.bat` scripts.
+* **FFmpeg** executable (Your own or included (soon))
+* No installation required – simply clone the repo and run the `.cmd` scripts.
 
 ---
 
