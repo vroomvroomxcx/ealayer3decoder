@@ -9,7 +9,7 @@ This repository includes a set of **batch scripts** with **complete guide** for 
 ## ✨ Features
 
 * **Batch decoding** – Automatically processes all `.sns`, `.snr`, and `.vid` compressed audio files in a folder.
-* **Audio conversion** – Converts decoded `.wav` files to FLAC or M4A formats.
+* **Audio conversion** – Converts processed `.wav` files to FLAC or M4A formats.
 * **Skip existing files** – Prevents overwriting previously converted files.
 * **Automatic folder creation** – Organizes output into `FLAC` and `M4A` subfolders.
 * **Clean, informative output** – Displays only successful conversions and skipped files.
