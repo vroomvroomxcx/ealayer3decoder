@@ -19,7 +19,7 @@ This repository includes a set of **batch scripts** with **complete guide** for 
 ## 📚 Table of Contents
 
 * [✨ Features](#-features)
-* [🎵 How to Extract Music from The Sims Game Series](#-how-to-extract-music-from-the-sims-4-3-and-medieval-and-possibly-the-sims--the-sims-2)
+* [🎵 How to Extract Music from The Sims Game Series](#-how-to-extract-music-from-the-sims-game-series)
 
   * [Step 1: Install Tools](#step-1-install-tools)
   * [Step 2: Locate and Extract _AUD Files](#step-2-locate-and-extract-_aud-files)
@@ -27,7 +27,7 @@ This repository includes a set of **batch scripts** with **complete guide** for 
     * [The Sims 4](#for-the-sims-4)
     * [The Sims 3 & Medieval](#for-the-sims-3--the-sims-medieval)
     * [The Sims 2](#for-the-sims-2)
-  * [Step 3: Decode .SNS Files](#step-3-decode-sns-files)
+  * [Step 3: Decode .SNS, .SNR, .VID Files](#step-3-decode-sns-snr-vid-files)
   * [Step 4: Convert Decoded Audio](#step-4-convert-decoded-audio)
   * [Step 5: Identify and Tag Your Audio](#step-5-identify-and-tag-your-audio)
 * [⚙️ Usage Summary](#️-usage-summary)
@@ -80,12 +80,14 @@ Follow the same extraction steps using **s3pe.exe**.
 
 * Base game files: `..\The Sims 3\GameData\Shared\Packages\`
 * Expansions & Stuff Packs: `..\The Sims 3\EPX(SP)XX\GameData\Shared\Packages\`
-* Look for files named `FullBuild_XX.package` or `DeltaBuild_XX.package`.
+* Look for files named `FullBuild_XX.package` or `DeltaBuild_XX.package`
+* Medieval Base game: `..\The Sims Medieval\GameData\Shared\Packages\`
 
 ---
 
 #### For *The Sims 2*
-* You do not need to decode audio. Step 4 is optional. 
+* [Step 4](#step-4-convert-decoded-audio) is optional.
+* 
    * Audio is located inside an `.package` file.
 1. Open **SimPE** → **File > Open** → Select your The Sims 2 installation folder. 
 * Audio files are stored in:
@@ -103,7 +105,7 @@ Follow the same extraction steps using **s3pe.exe**.
    
 ---
 
-### Step 3: Decode `.SNS`, .SNR, .VID Files
+### Step 3: Decode `.SNS`, `.SNR`, `.VID` Files
 
 1. Place all extracted `.sns`, `.snr`, `.vid` files in the **Work** folder.
 2. Run `DecodeAudio.bat`.
