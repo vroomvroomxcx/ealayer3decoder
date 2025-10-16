@@ -36,9 +36,6 @@ This repository includes a set of **batch scripts** with **complete guide** for 
 
 ---
 
-Would you like me to integrate it directly into your cleaned-up README so it’s fully formatted and consistent with the rest of the markdown (so you can copy it all at once)?
-
-
 ## 🎵 How to Extract Music from The Sims Game Series
 
 ### Step 1: Install Tools
