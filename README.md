@@ -87,7 +87,7 @@ Follow the same extraction steps using **s3pe.exe**.
 
 #### For *The Sims 2*
 * [Step 4](#step-4-convert-decoded-audio) is optional.
-* 
+  
    * Audio is located inside an `.package` file.
 1. Open **SimPE** → **File > Open** → Select your The Sims 2 installation folder. 
 * Audio files are stored in:
