@@ -69,7 +69,7 @@ Download and install **S4PE**, **S3PE** or **SimPE**:
 3. Sort by size:
 
    * Click the **Memsize** column header **twice** to sort files from largest to smallest.
-4. Select `.sns` files (they contain actual audio data).
+4. Select you're desired files. Usually only `.sns` contain actual audio in it.
 5. Right-click → **Export > To file…** and extract them into the **Decoder** folder or the **Work** folder (recommended).
 
 ---
@@ -103,9 +103,9 @@ Follow the same extraction steps using **s3pe.exe**.
    
 ---
 
-### Step 3: Decode `.SNS` Files
+### Step 3: Decode `.SNS`, .SNR, .VID Files
 
-1. Place all extracted `.sns` files in the **Work** folder.
+1. Place all extracted `.sns`, `.snr`, `.vid` files in the **Work** folder.
 2. Run `DecodeAudio.bat`.
 3. Wait for decoding to complete.
 4. Press **Y** to open the decoded audio folder or **N** to close.
