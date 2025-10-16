@@ -38,7 +38,7 @@ if %total%==0 (
     goto CHECKFILES
 )
 
-:: ===== Ensure output folder =====
+:: ===== Check output folder =====
 if not exist "%outputDir%" mkdir "%outputDir%"
 
 echo Found %total% file(s) to decode.
@@ -102,7 +102,7 @@ for %%i in ("%inputDir%\*.vid") do (
 
 echo.
 echo ==================================================
-:: ============== Final message =================
+:: ============== Ending message =================
 if %decoded%==0 (
     :: All skipped
     echo No files were processed.

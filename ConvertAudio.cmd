@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: ================= PRE-CHECKS =================
+:: ============== FFMPEG CHECKS ==================
 :: Check if ffmpeg is available (either locally or system-wide)
 where ffmpeg >nul 2>nul
 if %errorlevel% neq 0 (
@@ -19,8 +19,6 @@ if %errorlevel% neq 0 (
     )
 )
 
-:: ================= FRESH START =================
-:FRESH_START
 cls
 echo =====================================================
 echo                Batch Audio Converter
@@ -35,7 +33,7 @@ set "OUTPUT_DIR=%BASE_DIR%ConvertedAudio"
 set "FLAC_DIR=%OUTPUT_DIR%\FLAC"
 set "M4A_DIR=%OUTPUT_DIR%\M4A"
 
-:: ================= CHECK INPUT FOLDER =================
+:: ================ CHECK INPUT FOLDER ==================
 :CHECK_INPUT
 if not exist "%INPUT_DIR%" (
     echo The "DecodedAudio" folder was not found.
@@ -55,7 +53,7 @@ if %WAV_COUNT%==0 (
 
 goto FORMAT_CHOICE
 
-:: ================= FALLBACK TO DECODE =================
+:: ============= USE TO DECODE SCRIPT =================
 :RUN_DECODE_PROMPT
 echo.
 echo Do you want to run decode audio script to process audio files?
@@ -86,7 +84,7 @@ if %errorlevel%==1 (
     exit
 )
 
-:: ================= FORMAT CHOICE =================
+:: ============= AUDIO FORMAT CHOICE =================
 :FORMAT_CHOICE
 echo Choose an audio conversion format:
 echo.
