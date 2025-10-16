@@ -2,7 +2,7 @@
 
 # EA Layer 3 Audio Decoder & Converter
 
-This repository includes a set of **batch scripts** for decoding EA Layer 3 audio files (used in games such as *The Sims 4*, *The Sims 3*, *The Sims Medieval* and possibly *The Sims* & *The Sims 2*) into **WAV** format and converting them into standard formats like **FLAC (lossless)** or **M4A (AAC, 320 kbps)**.
+This repository includes a set of **batch scripts** with **complete guide** for decoding EA Layer 3 audio files (used in games such as *The Sims 4*, *The Sims 3* & *The Sims Medieval*) into **WAVE** audio format (.wav) and converting them into standard formats like **FLAC (lossless)** or **AAC (320 kbps)**.
 
 ---
 
@@ -26,7 +26,7 @@ This repository includes a set of **batch scripts** for decoding EA Layer 3 audi
 
     * [The Sims 4](#for-the-sims-4)
     * [The Sims 3 & Medieval](#for-the-sims-3--the-sims-medieval)
-    * [The Sims & The Sims 2](#for-the-sims--the-sims-2)
+    * [The Sims 2](#for-the-sims-2)
   * [Step 3: Decode .SNS Files](#step-3-decode-sns-files)
   * [Step 4: Convert Decoded Audio](#step-4-convert-decoded-audio)
   * [Step 5: Identify and Tag Your Audio](#step-5-identify-and-tag-your-audio)
@@ -41,16 +41,13 @@ Would you like me to integrate it directly into your cleaned-up README so it’s
 
 ## 🎵 How to Extract Music from *The Sims 4*, *3*, and *Medieval* (and possibly The Sims + The Sims 2)
 
-Follow these steps to extract in-game music and soundtracks into `.wav` files, ready for conversion.
-
----
-
 ### Step 1: Install Tools
 
 Download and install **S4PE** and **S3PE**:
 
 * [S4PE (The Sims 4 Package Editor)](https://github.com/s4ptacle/Sims4Tools/releases)
 * [S3PE (The Sims 3 Package Editor)](http://sourceforge.net/projects/sims3tools/files/s3pe/14-0222-1852/s3pe_14-0222-1852.7z/download)
+* [SimPE (Sim Package Editor)](https://modthesims.info/d/30839/simpe-latest-version-0-75f.html)
 
 ---
 
@@ -59,20 +56,21 @@ Download and install **S4PE** and **S3PE**:
 #### For *The Sims 4*
 
 1. Open **s4pe.exe** → **File > Open** → select your *The Sims 4* installation folder.
-2. Audio files are stored in:
+* Audio files are stored in:
 
    * Base game: `..\The Sims 4\Data\Client\`
-   * Expansion/Stuff packs: `..\The Sims 4\EP(SP)XX\`
+   * Expansion/Stuff Packs: `..\The Sims 4\EP(SP)XX\`
+     *(XX - A corresponding number)*
    * Common audio packages:
      `ClientFullBuild1`, `ClientFullBuild2`, `ClientFullBuild3`, `ClientFullBuild4`, `ClientFullBuild5`, `ClientDeltaBuild1`, `ClientDeltaBuild2`, `ClientDeltaBuild3`, `ClientDeltaBuild4`, `ClientDeltaBuild5`
-3. Filter only audio files:
+2. Filter only audio files:
 
    * In the filter section, enter `_AUD` in the **Tag** field, check **Tag** and **Filter Active**, then click **Set**.
-4. Sort by size:
+3. Sort by size:
 
    * Click the **Memsize** column header **twice** to sort files from largest to smallest.
-5. Select `.sns` files (they contain actual audio data).
-6. Right-click → **Export > To file…** and extract them into the **Decoder** folder or the **Work** folder (recommended).
+4. Select `.sns` files (they contain actual audio data).
+5. Right-click → **Export > To file…** and extract them into the **Decoder** folder or the **Work** folder (recommended).
 
 ---
 
@@ -84,9 +82,25 @@ Follow the same extraction steps using **s3pe.exe**.
 * Expansions & Stuff Packs: `..\The Sims 3\EPX(SP)XX\GameData\Shared\Packages\`
 * Look for files named `FullBuild_XX.package` or `DeltaBuild_XX.package`.
 
-#### For *The Sims* & *The Sims 2*
-Not yet tested but I feel like extracted audio's can be converted with the steps below, if not, use [vgstream](https://vgmstream.org/)
+---
 
+#### For *The Sims 2*
+* You do not need to decode audio. Step 4 is optional. 
+   * Audio is located inside an `.package` file.
+1. Open **SimPE** → **File > Open** → Select your The Sims 2 installation folder. 
+* Audio files are stored in:
+   
+   * Base game: `..\The Sims 2\Base\TSData\Res\Sound\`
+   * Ultimate Collection: `..\The Sims 2 Ultimate Collection\Fun with Pets\SP9\TSData\Res\Sound\`
+   * Legacy Collection: `..\The Sims 2 Legacy\Base\TSData\Res\Sound\`
+   * Expansion/Stuff Packs: `..\The Sims 2 \(EP-SP Name)\TSData\Res\Sound\`
+
+3. You'll see different named `.package`, if you want to extract music from **Pop** station select `Pop.package`
+
+4. After opening `.package` you'll see one or more **.MP3** audio files, select desired one's → right-click and select **Extract**. Select folder to extract your music to
+   * All extracted audio is already in `.mp3` audio format, converting is optional. All you have to do now is follow **[Step 5](#step-5-identify-and-tag-your-audio)** of the tutorial to properly identify and tag audio. 
+
+   
 ---
 
 ### Step 3: Decode `.SNS` Files
