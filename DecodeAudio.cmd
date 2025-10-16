@@ -17,6 +17,32 @@ if not exist "%inputDir%" (
     echo.
 )
 
+:: ===== Check for FFmpeg =====
+set "FFMPEG_PATH="
+
+:: Check local folder first
+if exist "%~dp0ffmpeg.exe" (
+    set "FFMPEG_PATH=%~dp0ffmpeg.exe"
+) else (
+    :: Check system PATH
+    for %%I in (ffmpeg.exe) do (
+        where %%I >nul 2>&1
+        if not errorlevel 1 set "FFMPEG_PATH=%%I"
+    )
+)
+
+if "%FFMPEG_PATH%"=="" (
+    echo WARNING: FFmpeg was not found.
+    echo .vid files will not be processed.
+    echo.
+    echo Make sure 'ffmpeg.exe' is in the same folder as this script or installed to system PATH.
+    echo You can download FFmpeg here: https://ffmpeg.org/download.html
+    echo ----------------------------------
+    set "FFMPEG_AVAILABLE=0"
+) else (
+    set "FFMPEG_AVAILABLE=1"
+)
+
 :CHECKFILES
 set /a total=0
 for %%i in ("%inputDir%\*.sns") do set /a total+=1
@@ -86,18 +112,22 @@ for %%i in ("%inputDir%\*.snr") do (
 )
 
 :: ===== Process .vid files =====
-for %%i in ("%inputDir%\*.vid") do (
-    set "outfile=%outputDir%\%%~ni.wav"
-    if not exist "!outfile!" (
-        set /a decoded+=1
-        set /a processed+=1
-        echo [!processed!/%total%] Decoding: %%~nxi
-        "%~dp0ffmpeg.exe" -i "%%i" -f wav -y "!outfile!" >nul 2>&1
-    ) else (
-        set /a skipped+=1
-        set /a processed+=1
-        echo Skipped. Already decoded: %%~nxi
+if "%FFMPEG_AVAILABLE%"=="1" (
+    for %%i in ("%inputDir%\*.vid") do (
+        set "outfile=%outputDir%\%%~ni.wav"
+        if not exist "!outfile!" (
+            set /a decoded+=1
+            set /a processed+=1
+            echo [!processed!/%total%] Decoding: %%~nxi
+            "%FFMPEG_PATH%" -i "%%i" -f wav -y "!outfile!" >nul 2>&1
+        ) else (
+            set /a skipped+=1
+            set /a processed+=1
+            echo Skipped. Already decoded: %%~nxi
+        )
     )
+) else (
+    echo Skipping .vid files as FFmpeg is not available.
 )
 
 echo.
