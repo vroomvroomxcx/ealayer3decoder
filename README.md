@@ -43,7 +43,7 @@ Would you like me to integrate it directly into your cleaned-up README so it’s
 
 ### Step 1: Install Tools
 
-Download and install **S4PE** and **S3PE**:
+Download and install **S4PE**, **S3PE** or **SimPE**:
 
 * [S4PE (The Sims 4 Package Editor)](https://github.com/s4ptacle/Sims4Tools/releases)
 * [S3PE (The Sims 3 Package Editor)](http://sourceforge.net/projects/sims3tools/files/s3pe/14-0222-1852/s3pe_14-0222-1852.7z/download)
